@@ -22,13 +22,13 @@
 
 简单的说：就是让服务消费方可以像本地方法调用一样，来调用远程服务方的服务。
 
-![](D:\project\doc\image\dubbo\RPC.png)
+![](https://github.com/MrGodHe/doc/blob/master/image/dubbo/RPC.png)
 
 # dubbo 是什么？
 
 Dubbo是一款高性能、轻量级的开源Java RPC框架
 
-![avatar](D:\project\doc\image\dubbo\dubbo.jpg)
+![](https://github.com/MrGodHe/doc/blob/master/image/dubbo/dubbo.jpg)
 
 **由以下几个模块构成：**
 
