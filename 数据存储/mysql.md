@@ -79,33 +79,33 @@ B树和B+树之间对比：https://blog.csdn.net/qq_26222859/article/details/806
        不同id -> id越大优先级越高，越先被执行
        
     二、select_type（查询语句类型）
-    (1) SIMPLE(简单SELECT,不使用UNION或子查询等)
-    (2) PRIMARY(查询中若包含任何复杂的子部分,最外层的select被标记为PRIMARY)
-    (3) UNION(UNION中的第二个或后面的SELECT语句)
-    (4) DEPENDENT UNION(UNION中的第二个或后面的SELECT语句，取决于外面的查询)
-    (5) UNION RESULT(UNION的结果)
-    (6) SUBQUERY(子查询中的第一个SELECT)
-    (7) DEPENDENT SUBQUERY(子查询中的第一个SELECT，取决于外面的查询)
-    (8) DERIVED(派生/衍生表的SELECT, FROM子句的子查询)
-    (9) MATERIALIZED(物化子查询) 在SQL执行过程中，
-        第一次需要子查询结果时执行子查询并将子查询的结果保存为临时表 ，后续对子查询结果集的访问将直接通过临时表获得。
-    (10) UNCACHEABLE SUBQUERY(一个子查询的结果不能被缓存，必须重新评估外链接的第一行)
-    (11) UNCACHEABLE UNION(UNION查询的结果不能被缓存)
+    	(1) SIMPLE(简单SELECT,不使用UNION或子查询等)
+    	(2) PRIMARY(查询中若包含任何复杂的子部分,最外层的select被标记为PRIMARY)
+    	(3) UNION(UNION中的第二个或后面的SELECT语句)
+    	(4) DEPENDENT UNION(UNION中的第二个或后面的SELECT语句，取决于外面的查询)
+    	(5) UNION RESULT(UNION的结果)
+    	(6) SUBQUERY(子查询中的第一个SELECT)
+    	(7) DEPENDENT SUBQUERY(子查询中的第一个SELECT，取决于外面的查询)
+    	(8) DERIVED(派生/衍生表的SELECT, FROM子句的子查询)
+    	(9) MATERIALIZED(物化子查询) 在SQL执行过程中，
+        	第一次需要子查询结果时执行子查询并将子查询的结果保存为临时表 ，后续对子查询结果集的访问将直接通过临时表获得。
+    	(10) UNCACHEABLE SUBQUERY(一个子查询的结果不能被缓存，必须重新评估外链接的第一行)
+    	(11) UNCACHEABLE UNION(UNION查询的结果不能被缓存)
     
     三、table，查询涉及的表或衍生表(若表有别名，则显示别名)
     
     四、partitions查询涉及到的分区
     
-    五、type 提供了判断查询是否高效的重要依据依据
-    type	    说明
-    ALL	        全数据表扫描
-    index	    全索引表扫描
-    RANGE	    对索引列进行范围查找
-    INDEX_MERGE	合并索引，使用多个单列索引搜索
-    REF	        根据索引查找一个或多个值
-    EQ_REF	    搜索时使用primary key 或 unique类型
-    CONST	    常量，表最多有一个匹配行,因为仅有一行,在这行的列值可被优化器剩余部分认为是常数,const表很快,因为它们只读取一次。
-    SYSTEM	    系统，表仅有一行(=系统表)。这是const联接类型的一个特例。
+    五、“type” 提供了判断查询是否高效的重要依据依据
+    	type	    说明
+    	ALL	        全数据表扫描
+    	index	    全索引表扫描
+    	RANGE	    对索引列进行范围查找
+    	INDEX_MERGE	合并索引，使用多个单列索引搜索
+    	REF	        根据索引查找一个或多个值
+        EQ_REF	    搜索时使用primary key 或 unique类型
+    	CONST	    常量，表最多有一个匹配行,因为仅有一行,在这行的列值可被优化器剩余部分认为是常数,const表很快,因为它们只读取一					次。
+    	SYSTEM	    系统，表仅有一行(=系统表)。这是const联接类型的一个特例。
     性能：all < index < range < index_merge < ref_or_null < ref < eq_ref < system/const
     性能在 range 之下基本都可以进行调优
     
@@ -114,10 +114,10 @@ B树和B+树之间对比：https://blog.csdn.net/qq_26222859/article/details/806
     七、key：MySQL查询实际使用到的索引。
     
     八、key_len：表示索引中使用的字节数（只计算利用索引作为index key的索引长度，不包括用于group by/order by的索引长度）
-    (1) 一般地，key_len 等于索引列类型字节长度，例如int类型为4 bytes，bigint为8 bytes；
-    (2) 如果是字符串类型，还需要同时考虑字符集因素，例如utf8字符集1个字符占3个字节，gbk字符集1个字符占2个字节
-    (3) 若该列类型定义时允许NULL，其key_len还需要再加 1 bytes
-    (4) 若该列类型为变长类型，例如 VARCHAR（TEXT\BLOB不允许整列创建索引，如果创建部分索引也被视为动态列类型），
+    	(1) 一般地，key_len 等于索引列类型字节长度，例如int类型为4 bytes，bigint为8 bytes；
+    	(2) 如果是字符串类型，还需要同时考虑字符集因素，例如utf8字符集1个字符占3个字节，gbk字符集1个字符占2个字节
+    	(3) 若该列类型定义时允许NULL，其key_len还需要再加 1 bytes
+    	(4) 若该列类型为变长类型，例如 VARCHAR（TEXT\BLOB不允许整列创建索引，如果创建部分索引也被视为动态列类型），
         其key_len还需要再加 2 bytes
         
     九、ref：显示该表的索引字段关联了哪张表的哪个字段
