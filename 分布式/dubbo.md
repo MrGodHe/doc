@@ -1,5 +1,3 @@
-[TOC]
-
 | 官方文档 | http://dubbo.apache.org/zh-cn/ |
 | -------- | ------------------------------ |
 | 版本号   | 2.7.4                          |
@@ -30,7 +28,7 @@
 
 Dubbo是一款高性能、轻量级的开源Java RPC框架
 
-![](D:\project\doc\image\dubbo\dubbo.jpg)
+![avatar](D:\project\doc\image\dubbo\dubbo.jpg)
 
 **由以下几个模块构成：**
 
@@ -71,9 +69,9 @@ Dubbo是一款高性能、轻量级的开源Java RPC框架
    ```
    服务导出过程：开始于spring容器的刷新事件，dubbo在接收到事件之后，会立即执行服务导出逻辑，
    大致逻辑步骤如下：
-         前置工作，检查参数，组装url
-         导出服务，导出服务到本地（jvm），导出服务到远程
-         注册服务，向注册中心注册服务，用于服务发现
+       >  前置工作，检查参数，组装url
+       >  导出服务，导出服务到本地（jvm），导出服务到远程
+       >  注册服务，向注册中心注册服务，用于服务发现
        
    服务的延时暴露：如果你的服务需要预热时间，比如初始化缓存，等待相关资源就位等，可以使用 delay 进行延迟暴露
    Dubbo-2.6.5之前版本
@@ -88,11 +86,11 @@ Dubbo是一款高性能、轻量级的开源Java RPC框架
 
    ```
    Dubbo服务的引用分两种：
-         第一种是使用服务直连的方式引用服务（联调测试环境）
-         第二种是通过注册中心进行引用
+       >  第一种是使用服务直连的方式引用服务（联调测试环境）
+       >  第二种是通过注册中心进行引用
    Dubbo服务的引用时机分两种：
-         第一个是在 Spring 容器调用 ReferenceBean 的 afterPropertiesSet 方法时引用服务
-         第二个是在 ReferenceBean 对应的服务被注入到其他类中时引用
+       >  第一个是在 Spring 容器调用 ReferenceBean 的 afterPropertiesSet 方法时引用服务
+       >  第二个是在 ReferenceBean 对应的服务被注入到其他类中时引用
    ```
 
 3. **服务目录**
@@ -131,14 +129,15 @@ Dubbo是一款高性能、轻量级的开源Java RPC框架
  
 
 #  dubbo-spi
-    SPI 全称为 Service Provider Interface，是一种服务发现机制。
-    SPI 的本质是将接口实现类的全限定名配置在文件中，并由服务加载器读取配置文件，
-        加载实现类。这样可以在运行时，动态为接口替换实现类
-    --> 通过 SPI 机制为我们的程序提供拓展功能
-    
-    dubbo-spi 
+SPI 全称为 Service Provider Interface（服务发现机制）。
+
+SPI 的本质是将接口实现类的全限定名配置在文件中，并由服务加载器读取配置文件，加载实现类。这样可以在运行时，动态为接口替换实现类，通过 SPI 机制为我们的程序提供拓展功能。
+
+**dubbo-spi** 
         1. 配置文件需放置在 META-INF/dubbo 路径下（键值对的方式进行配置，如：bumblebee = org.apache.spi.Bumblebee）
         2. 接口上 @SPI 注解
-    Dubbo SPI 除了支持按需加载接口实现类，还增加了 IOC 和 AOP 等特性
+    Dubbo SPI 除了支持按需加载接口实现类，还增加了 IOC 和 AOP 等特性    
+
+
 
  
