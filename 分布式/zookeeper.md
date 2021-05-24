@@ -143,10 +143,8 @@ ACL由（scheme：expression，perms）对组成。表达式的格式特定于�
    vote_sid： 接收到的投票中所推举Leader服务器的SID。
    vote_zxid：接收到的投票中所推举Leader服务器的ZXID、
    self_sid： 当前服务器自己的SID
-   self_zxid：当前服务器自己的ZXID
+   self_zxid：当前服务器自己的ZXID 
    ```
-   
-   ​               
    
    ```
    规则：
@@ -157,7 +155,7 @@ ACL由（scheme：expression，perms）对组成。表达式的格式特定于�
    规则四：如果vote_zxid等于self_zxid，并且vote_sid小于self_sid，那么坚持自己的投票，不做任何变更。
    ```
    
-     (3)确定领导：
+    (3) 确定领导：
          	经过第二轮投票后，集群中的每台机器都会再次接收到其他机器的投票，然后开始统计投票，
              如果一台机器收到了超过半数的相同投票，那么这个投票对应的SID机器即为Leader
 
