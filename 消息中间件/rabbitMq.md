@@ -10,34 +10,33 @@
 
  **组成机构**
 
-- **Producer**：消息的生产者
+1. **Producer**：消息的生产者
 
-- **Comsumer**：消息的消费者
+2. **Comsumer**：消息的消费者
 
-- **RabbitMQ Server**： 消息队列实体服务器，又称Broker
+3. **RabbitMQ Server**： 消息队列实体服务器，又称Broker
 
   由以下组成：
 
-   **vhost**
-      虚拟主机，每一个RabbitMQ服务器都能创建虚拟消息服务器，mini版的RabbitMQ（开箱即用的默认的虚拟主机“/”）
-  **Exchange & Bindings** 
-  	交换机，队列绑定
-  	1、direct：处理路由键，binding key 与 routing key完全匹配
+  **虚拟主机 （vhost）**
+      每一个RabbitMQ服务器都能创建虚拟消息服务器，mini版的RabbitMQ（开箱即用的默认的虚拟主机“/”）
+  **交换机，队列绑定（ Exchange & Bindings）**
 
-  ​	![](https://github.com/MrGodHe/doc/blob/master/image/rabbitMq/rabbitMq_direct.png)
+  - **direct**：处理路由键，binding key 与 routing key完全匹配	
 
-  ​	2、fanout：不处理路由键（广播），它会把所有发送到该Exchage的消息路由到所有与它绑定的Queue中
+    ![](https://github.com/MrGodHe/doc/blob/master/image/rabbitMq/rabbitMq_direct.png)
 
-  ​	![](https://github.com/MrGodHe/doc/blob/master/image/rabbitMq/rabbitMq_fanout.png)
+  - **fanout**：不处理路由键（广播），它会把所有发送到该Exchage的消息路由到所有与它绑定的Queue中
 
-  ​	3、topic ：匹配路由键， binding key 与 routing key 匹配（一对多的模糊匹配）
+    ![](https://github.com/MrGodHe/doc/blob/master/image/rabbitMq/rabbitMq_fanout.png)
 
-  ​	![](https://github.com/MrGodHe/doc/blob/master/image/rabbitMq/rabbitMq_topic.png)
+  - **topic ：**匹配路由键， binding key 与 routing key 匹配（一对多的模糊匹配）
 
-  ​	4、headers：根据发送的消息内容中的headers属性进行匹配
+    ![](https://github.com/MrGodHe/doc/blob/master/image/rabbitMq/rabbitMq_topic.png)
 
-  **Queue**	
-  	队列、消息的存储
+  - **headers：**根据发送的消息内容中的headers属性进行匹配
+
+  **队列、消息的存储 （Queue）**
   	1、持久性（消息代理重启后，队列依旧存在）
   	2、独享（只被一个连接（connection）使用，而且当连接关闭后队列即被删除）
   	3、自动删除（当最后一个消费者退订后即被删除）
@@ -85,5 +84,4 @@
                 }, (sequenceNumber, multiple) -> {
                     // code when message is nack-ed
                 });
-        
 
