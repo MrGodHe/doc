@@ -226,7 +226,7 @@ redis是内存数据库，当服务进程中断后，为了防止内存数据库
 
 **架构：**
 
-![](https://github.com/MrGodHe/doc/blob/master/image/redis/redis_file_event.png)
+![](https://github.com/MrGodHe/doc/blob/master/image/redis/redis_publish_subscribe.png)
 
 发布者将消息发送到某个的频道，订阅了这个频道的订阅者就能接收到这条消息。
 
