@@ -32,7 +32,7 @@
 
 - ## [mysql](https://github.com/MrGodHe/doc/blob/master/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/mysql.md)
 
-- # [redis]()
+- # [redis](https://github.com/MrGodHe/doc/blob/master/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/redis.md)
 
 # 线上故障排查
 

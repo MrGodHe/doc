@@ -211,13 +211,28 @@ redis是内存数据库，当服务进程中断后，为了防止内存数据库
         	//客户端数据,指向 redisClient 的指针
         	void *clientData;
     	} aeFileEvent;
-    
+  
     定义：基于reactor（反应器）模式开发自己的网络事件处理器
     内容：
     	1、采用I/O多路复用程序来同时监听多个套接字，并根据套接字当前要执行的任务来关联不同的事件处理器
         2、当被监听套接字准备好执行应答（accept）、读取（read）、写入（write）、关闭（close）等操作时，文件处理器就会调用
            之前关联好的处理器来执行事件       
 
+
+
+# redis发布与订阅
+
+在redis中，你可以设定对某一个key值进行消息发布及消息订阅，当一个key值上进行了消息发布后，所有订阅它的客户端都会收到相应的消息。
+
+**架构：**
+
+![](https://github.com/MrGodHe/doc/blob/master/image/redis/redis_file_event.png)
+
+发布者将消息发送到某个的频道，订阅了这个频道的订阅者就能接收到这条消息。
+
+- publisher 发布者
+- subscriber 订阅者
+- channel  通道（相当于主题）
 
 # redis 锁（CAP -> AP）
 
