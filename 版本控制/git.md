@@ -114,11 +114,14 @@ git branch -a 查看所有分支（包括远程和本地）
 git checkout -b xxx  新建一个分支
 git push origin xxx  推送分支到远程
 
---- 从远程仓库中拉取新分支 --- 
-git branch 
+--- 从远程仓库中拉取新分支到本地 --- 
+git checkout -b xxx origin/xxx  
 
 --- 删除分支 ---
 git branch -d xxx 			  	删除本地分支
 git push origin --delete  xxx	删除远程分支
+
+--- 分支合并 ---
+git merge xxx 	表示把xxx分支合并到当前分支上
 ```
 
