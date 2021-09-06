@@ -73,7 +73,7 @@ git log --stat 	"--stat":是在git log 的基础上输出文件增删改的统�
 注：个人喜欢 -n 再结合其他控制参数来使用！
 ```
 
-回退版本
+回退commit 版本
 
 ```
 git reset --hard HEAD^    	当前的版本回退到上一个版本，^几个就是回退上几个
@@ -83,5 +83,11 @@ git reset  --hard HEAD~100 	当前的版本回到前100个版本
 1.hard 模式会重置工作目录和暂存区，没有commit的修改会被完全擦掉
 2.soft 
 3.mixed
+```
+
+克隆仓库
+
+```
+git clone xxx 
 ```
 
