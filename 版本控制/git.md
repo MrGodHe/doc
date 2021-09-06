@@ -62,3 +62,14 @@ git status
 git diff xxx
 ```
 
+查看提交日志
+
+```
+git log 
+git log -n 		"-n"代表日志输出数量
+git log -p		"-p"控制输出每个commit具体修改的内容，输出的形式以diff的形式给出
+git log --stat 	"--stat":是在git log 的基础上输出文件增删改的统计数据。
+
+注：个人喜欢 -n 再结合其他控制参数来使用！
+```
+
