@@ -32,6 +32,17 @@ Git是分布式版本控制系统
 git init
 ```
 
+配置
+
+```
+git config --list  			查询所有配置
+git config -e [--global] 	编辑Git配置文件
+
+设置提交代码用户信息
+git config [--global] user.name "[name]" 			
+git config [--global] user.email "[email address]"
+```
+
 加入暂存区
 
 ```
@@ -89,5 +100,25 @@ git reset  --hard HEAD~100 	当前的版本回到前100个版本
 
 ```
 git clone xxx 
+```
+
+分支管理
+
+```
+--- 查看分支 ---
+git branch 	查看本地分支
+git branch -r 查看远程分支
+git branch -a 查看所有分支（包括远程和本地）
+
+--- 远程仓库无分支 ---
+git checkout -b xxx  新建一个分支
+git push origin xxx  推送分支到远程
+
+--- 从远程仓库中拉取新分支 --- 
+git branch 
+
+--- 删除分支 ---
+git branch -d xxx 			  	删除本地分支
+git push origin --delete  xxx	删除远程分支
 ```
 
