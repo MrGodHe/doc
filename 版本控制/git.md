@@ -125,3 +125,34 @@ git push origin --delete  xxx	删除远程分支
 git merge xxx 	表示把xxx分支合并到当前分支上
 ```
 
+远程仓库同步
+
+```
+git fetch  						同步远程仓库所有变动
+git remote -v 					显示所有远程仓库信息
+git remote add [origin] [url]  	增加一个新的远程仓库，并命名
+git push [origin] [branch]		上传本地指定分支到远程仓库
+git pull [origin] [branch] 		取回远程仓库的变化，并与本地分支合并
+```
+
+bug分支
+
+场景：当我们在开发一个项目，开发到一半且不能提交内容时，突然又接到一个bug修复。
+
+```
+git stash 将当前工作现场隐藏起来
+git stash save "save message"  加备注
+......干修复bug
+
+--- 恢复工作区 ---
+git stash list 查看隐藏的工作区列表
+1、git stash apply stash@{$num}	恢复，恢复后，stash内容并不删除，你需要使用命令git stash drop来删除
+2、git stash pop  stash@{$num}	恢复的同时把stash内容也删除了
+注：stash@{$num} 指的第几个隐藏
+
+--- 清除所有缓存 ---
+git stash clear
+
+
+```
+
