@@ -4,8 +4,8 @@
 
 | 官网文档地址                                                 |
 | ------------------------------------------------------------ |
-| 英文：https : //github.com/apache/rocketmq/tree/master/docs/en |
-| 中文：https : //github.com/apache/rocketmq/tree/master/docs/cn |
+| 英文：https://github.com/apache/rocketmq/tree/master/docs/en |
+| 中文：https://github.com/apache/rocketmq/tree/master/docs/cn |
 
 # RocketMq 安装
 
@@ -108,3 +108,26 @@
 
 7. 关闭服务和broker， 关闭windows窗口就行
              
+
+# rocketMq 进阶知识
+
+## 消息模型（message model）
+
+rocketMQ主要由 Producer、Broker、Consumer 三部分组成。
+
+- **消息生产者 Producer** 
+
+  负责生产消息，一个消息生产者会把消息发送到Broker服务器。提供多种发送方式：同步发送、异步发送、顺序发送、单向发送。
+
+  同步和异步均需要Broker返回确认消息，单向发送不需要。
+
+- **消息消费者 Consumer**
+
+  负责消费消息，一个消息消费者会从Broker服务器拉取消息，并将其提供给应用程序。消费方式：拉取式消费、推动式消费
+
+- **代理服务器 Broker Server**
+
+  消息中转角色，负责存储消息、转发消息。代理服务器也存储消息相关的元数据，包括消费者组、消费进度偏移和主题和队列消息等
+
+  
+
