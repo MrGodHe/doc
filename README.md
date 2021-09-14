@@ -6,7 +6,17 @@
 
 # JAVA
 
-- ## [日期时间类](https://github.com/MrGodHe/doc/blob/master/JAVA/%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E7%B1%BB.md)
+- ## 常用类库（java.lang）
+
+  ### [日期时间类]()
+
+  ### [ThreadLocal]()
+
+- ## 并发包（java.util.concurrent）
+
+  ### [atomic]()
+
+- ## 测试
 
 # JVM
 
@@ -41,4 +51,24 @@
 # 网络通信
 
 - ## [tcp](https://github.com/MrGodHe/doc/blob/master/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/tcp.md)
+
+# 版本控制
+
+- ## [git](https://github.com/MrGodHe/doc/blob/master/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/git.md)
+
+- ## [svn（subversion)](https://github.com/MrGodHe/doc/blob/master/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/subversion%EF%BC%88svn%EF%BC%89.md)
+
+# 操作系统
+
+- ## [内存空间（用户内核）]()
+
+- ## [内存映射]()
+
+- ## [页缓存（pageCache）]()
+
+- ## [Linux内存分页管理]()
+
+# 设计模式
+
+- ## [创建者模式]()
 
