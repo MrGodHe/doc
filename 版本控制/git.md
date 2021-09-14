@@ -152,7 +152,7 @@ git stash list 查看隐藏的工作区列表
 
 --- 清除所有缓存 ---
 git stash clear
-
-
 ```
+
+# 四、异常问题
 
