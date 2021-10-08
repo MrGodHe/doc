@@ -4,7 +4,7 @@ Git是分布式版本控制系统
 
 结构功能图：
 
-![](https://github.com/MrGodHe/doc/blob/master/image/git/git.jpg)
+![](E:\project\study-doc\doc\image\git\git.jpg)
 
 - workspace	工作区
 - Index / Stage  暂存区
