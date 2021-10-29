@@ -1,6 +1,6 @@
 # tcp报文格式
 
-![](https://github.com/MrGodHe/doc/blob/master/image/tcp/TCP.png)
+![](E:\project\study-doc\doc\image\tcp\TCP.png)
 
 其中比较重要的字段有：
 
