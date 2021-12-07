@@ -14,7 +14,7 @@ MAX(expression);
 
 1、把一组数据的各项统计为一行数据
 
-![](E:\project\study-doc\doc\image\mysql\mysql_max_eg1.jpg)
+![](../image/mysql/mysql_max_eg1.jpg)
 
 使用：
 
@@ -28,5 +28,5 @@ FROM
 
  结果：
 
-![](E:\project\study-doc\doc\image\mysql\mysql_max_eq2.jpg)
+![](../image/mysql/mysql_max_eq2.jpg)
 

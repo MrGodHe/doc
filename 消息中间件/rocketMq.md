@@ -1,11 +1,9 @@
-官网入门地址：http://rocketmq.apache.org/docs/quick-start/
-
-官网下载地址：http://rocketmq.apache.org/release_notes/release-notes-4.7.0/
-
-| 官网文档地址                                                 |
+| 参考地址                                                     |
 | ------------------------------------------------------------ |
-| 英文：https://github.com/apache/rocketmq/tree/master/docs/en |
-| 中文：https://github.com/apache/rocketmq/tree/master/docs/cn |
+| 官网入门地址：http://rocketmq.apache.org/docs/quick-start/   |
+| 官网下载地址：http://rocketmq.apache.org/release_notes/release-notes-4.7.0/ |
+| 英文文档：https://github.com/apache/rocketmq/tree/master/docs/en |
+| 中文文档：https://github.com/apache/rocketmq/tree/master/docs/cn |
 
 # RocketMq 安装
 
@@ -67,8 +65,6 @@
 
    **注意**：roketMq 默认的jvm内存配置比较大，如仅测试机器可以适当调整， 需要修改找到runserver.sh 和 runbroker.sh
         （-server -Xms512m -Xmx512m -Xmn256m）
-
-
 
 ## 一、 windows安装
 

@@ -98,11 +98,11 @@ Redis虽然是C语言编写，但是它并没有使用C语言的传统字符串�
             存储图片等二进制数据。 SDS会使用自身结构中的len来判断结尾，而不会以空字符来判断是否结束。
 举例： 命令redis> SET msg "redis" 
 
-![](https://github.com/MrGodHe/doc/blob/master/image/redis/redis_SDS.png)
+![](../image/redis/redis_SDS.png)
 
 对比C语言字符串区别如下：
 
-![](https://github.com/MrGodHe/doc/blob/master/image/redis/redis_SDS&C—string.png)
+![](../image/redis/redis_SDS&C-string.png)
 
 
 
@@ -128,7 +128,7 @@ redis是内存数据库，当服务进程中断后，为了防止内存数据库
 
 1. **AOF**
 
-   ![](https://github.com/MrGodHe/doc/blob/master/image/redis/redis_AOF.png)
+   ![](../image/redis/redis_AOF.png)
 
    ```
    内容：通过保存redis服务器执行的写命令来记录数据库状态
@@ -148,7 +148,7 @@ redis是内存数据库，当服务进程中断后，为了防止内存数据库
 
 2. **RDB**
 
-   ![](https://github.com/MrGodHe/doc/blob/master/image/redis/redis_RDB.png)
+   ![](../image/redis/redis_RDB.png)
 
    ```
    内容：将某个时间点的内存数据库保存到一个RDB文件。RDB文件是一个经过压缩的二进制文件，通过该文件可以还原当时的数据库状态。
@@ -197,7 +197,7 @@ redis是内存数据库，当服务进程中断后，为了防止内存数据库
 
 - **文件事件（FileEvent）**
 
-  ![](https://github.com/MrGodHe/doc/blob/master/image/redis/redis_file_event.png)
+  ![](../image/redis/redis_file_event.png)
 
     结构：
     	/* File event structure - 文件事件结构体*/
@@ -226,7 +226,7 @@ redis是内存数据库，当服务进程中断后，为了防止内存数据库
 
 **架构：**
 
-![](https://github.com/MrGodHe/doc/blob/master/image/redis/redis_publish_subscribe.png)
+![](../image/redis/redis_publish_subscribe.png)
 
 发布者将消息发送到某个的频道，订阅了这个频道的订阅者就能接收到这条消息。
 

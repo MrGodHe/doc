@@ -51,7 +51,7 @@ B树和B+树之间对比：https://blog.csdn.net/qq_26222859/article/details/806
         B-树中的一个包含n个关键字，n+1个指针的结点的一般形式为： （n,P0,K1,P1,K2,P2,…,Kn,Pn）
         其中，Ki为关键字，K1<K2<…<Kn, Pi 是指向包括Ki到Ki+1之间的关键字的子树的指针。
 
-![](https://github.com/MrGodHe/doc/blob/master/image/mysql/B-tree.png)       
+![](../image/mysql/B-tree.png)       
     
     .B+树
         B+树是B树的一种变形形式，B+树上的叶子结点存储关键字以及相应记录的地址，叶子结点以上各层作为索引使用

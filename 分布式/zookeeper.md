@@ -11,7 +11,7 @@
 # zookeeper 数据模型和分层命名空间
 ZooKeeper提供的名称空间非常类似于标准文件系统。名称是由斜杠（/）分隔的路径元素序列。  
 ZooKeeper名称空间中的每个节点都由路径标识
-![](https://github.com/MrGodHe/doc/blob/master/image/zookeeper/zk_namespace.jpg)
+![](../image/zookeeper/zk_namespace.jpg)
 
 ## 节点模型- znode
 与标准文件系统不同，ZooKeeper命名空间中的每个节点都可以包含与之关联的数据以及子项。
@@ -117,7 +117,7 @@ ACL由（scheme：expression，perms）对组成。表达式的格式特定于�
     所有的事务请求必须一个全局唯一的服务器（Leader）来协调处理，集群其余的服务器称为follower服务器。
     Leader服务器负责将一个客户端请求转化为事务提议（Proposal），并将该proposal分发给集群所有的follower服务器。之后Leader服务器需要等待所有的follower服务器的反馈，一旦超过了半数的follower服务器进行了正确反馈后，那么Leader服务器就会再次向所有的follower服务器分发commit消息，要求其将前一个proposal进行提交。
 
-![](https://github.com/MrGodHe/doc/blob/master/image/zookeeper/zk_Atomic_Broadcast.jpg)
+![](../image/zookeeper/zk_Atomic_Broadcast.jpg)
 
 ## **四. 领导选举（leader）**
 
@@ -172,7 +172,7 @@ CAP 原则指的是，这三个要素最多只能同时实现两点，不可能�
 
    **Lock :**
 
-![](https://github.com/MrGodHe/doc/blob/master/image/zookeeper/zk_writeLock.jpg)
+![](../image/zookeeper/zk_writeLock.jpg)
 
         (1).基于一个根节点“/locknode”上创建 临时且有序“EPEMERAL_SEQUENTIAL”节点
         (2).获取locknode根节点的 getChildren()子节点列表，并不设置Watcher（避免羊群效应）

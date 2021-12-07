@@ -83,5 +83,5 @@ Spring为我们提供的一个事件监听、订阅的实现，内部实现原�
 
 **自定义事件：**
 
-![](https://github.com/MrGodHe/doc/blob/master/image/springboot/springboot_event.png)
+![](../image/springboot/springboot_event.png)
 

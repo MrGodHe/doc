@@ -4,7 +4,7 @@ Git是分布式版本控制系统
 
 结构功能图：
 
-![](E:\project\study-doc\doc\image\git\git.jpg)
+![](../image/git/git.jpg)
 
 - workspace	工作区
 - Index / Stage  暂存区
@@ -95,6 +95,8 @@ git reset  --hard HEAD~100 	当前的版本回到前100个版本
 2.soft 
 3.mixed
 ```
+
+![](../image/git/git_reset.png)
 
 克隆仓库
 

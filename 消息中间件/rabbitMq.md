@@ -6,7 +6,7 @@
 实现了高级消息队列协议（AMQP）的开源消息代理软件（消息中间件）
 ```
 
-![](https://github.com/MrGodHe/doc/blob/master/image/rabbitMq/rabbitMq.png)
+![](../image/rabbitMq/rabbitMq.png)
 
  **组成机构**
 
@@ -24,15 +24,15 @@
 
   - **direct**：处理路由键，binding key 与 routing key完全匹配	
 
-    ![](https://github.com/MrGodHe/doc/blob/master/image/rabbitMq/rabbitMq_direct.png)
+    ![](../image/rabbitMq/rabbitMq_direct.png)
 
   - **fanout**：不处理路由键（广播），它会把所有发送到该Exchage的消息路由到所有与它绑定的Queue中
 
-    ![](https://github.com/MrGodHe/doc/blob/master/image/rabbitMq/rabbitMq_fanout.png)
+    ![](../image/rabbitMq/rabbitMq_fanout.png)
 
   - **topic ：**匹配路由键， binding key 与 routing key 匹配（一对多的模糊匹配）
 
-    ![](https://github.com/MrGodHe/doc/blob/master/image/rabbitMq/rabbitMq_topic.png)
+    ![](../image/rabbitMq/rabbitMq_topic.png)
 
   - **headers：**根据发送的消息内容中的headers属性进行匹配
 

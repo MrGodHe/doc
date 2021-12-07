@@ -24,7 +24,6 @@
 
   将地址空间分成许多的页，建立物理页和虚拟页关系。每页的大小由 CPU 决定，然后由操作系统选择页的大小。目前 Inter 系列的 CPU 支持 4KB 大小。
 
-  ![physics-virtual-RAM-rela](C:\Users\Administrator\Desktop\physics-virtual-RAM-rela.png)
 
 # 内存分页
 
@@ -42,7 +41,7 @@ getconf PAGE_SIZE
 
 Linux把物理内存和进程空间都分割成页。无论是虚拟页，还是物理页，一页之内的地址都是连续的。这样的话，一个虚拟页和一个物理页对应起来，页内的数据就可以按顺序一一对应。这意味着，虚拟内存地址和物理内存地址的末尾部分应该完全相同。大多数情况下，每一页有4096个字节。由于4096是2的12次方，所以地址最后12位的对应关系天然成立。我们把地址的这一部分称为偏移量（offset）。偏移量实际上表达了该字节在页内的位置。地址的前一部分则是页编号。操作系统只需要记录页编号的对应关系。
 
-![](E:\project\study-doc\doc\image\os\linux-page-rela.png)
+![](../image/os/linux-page-rela.png)
 
 # 多级分页表
 
@@ -52,4 +51,4 @@ Linux把物理内存和进程空间都分割成页。无论是虚拟页，还是
 
 这种单一的连续分页表，需要给每一个虚拟页预留一条记录的位置。但对于任何一个应用进程，其进程空间真正用到的地址都相当有限。如果使用连续分页表，很多条目都没有真正用到。因此，Linux中的分页表，采用了多层的数据结构。多层的分页表能够减少所需的空间。
 
-![](E:\project\study-doc\doc\image\os\linux-page-level-rela.png)
+![](../image/os/linux-page-level-rela.png)
