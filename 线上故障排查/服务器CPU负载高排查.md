@@ -22,3 +22,4 @@
     2. jmap得到运行java程序的内存分配的详细情况， jmap -dump:format=b,file=盘符:/XXX.hprof <pid>
        导出jvm内存文件
     3. jstat这是一个比较实用的一个命令，可以观察到classloader，compiler，gc相关信息。可以时时监控资源和性能     
+
