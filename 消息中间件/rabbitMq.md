@@ -8,19 +8,28 @@
 
 ![](../image/rabbitMq/rabbitMq.png)
 
- **组成机构**
+ **组成结构**
 
-1. **Producer**：消息的生产者
+- **Producer**：消息的生产者
 
-2. **Comsumer**：消息的消费者
+- **Comsumer**：消息的消费者
 
-3. **RabbitMQ Server**： 消息队列实体服务器，又称Broker
+- **RabbitMQ Server**： 消息队列实体服务器，又称Broker
 
   由以下组成：
 
-  **虚拟主机 （vhost）**
-      每一个RabbitMQ服务器都能创建虚拟消息服务器，mini版的RabbitMQ（开箱即用的默认的虚拟主机“/”）
-  **交换机，队列绑定（ Exchange & Bindings）**
+  **（1）虚拟主机 （vhost）** 
+
+  每一个RabbitMQ服务器都能创建虚拟消息服务器，mini版的RabbitMQ（开箱即用的默认的虚拟主机“/”）
+
+  **（2）交换机，队列绑定（ Exchange & Bindings）**
+
+  
+
+  
+
+
+****
 
   - **direct**：处理路由键，binding key 与 routing key完全匹配	
 
