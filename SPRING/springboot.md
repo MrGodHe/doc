@@ -85,3 +85,11 @@ Spring为我们提供的一个事件监听、订阅的实现，内部实现原�
 
 ![](../image/springboot/springboot_event.png)
 
+
+
+# 获取静态文件资源
+
+```
+ClassPathResource
+```
+
