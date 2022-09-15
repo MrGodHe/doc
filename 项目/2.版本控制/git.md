@@ -158,3 +158,4 @@ git stash clear
 
 # 四、异常问题
 
+git config --global http.sslVerify "false"
