@@ -32,9 +32,11 @@ mvn deploy -s settings-xx.xml
 
 
 
+ 打包插件
 
-
-
+- maven-jar-plugin，默认的打包插件，用来打普通的project JAR包；
+- maven-shade-plugin，用来打可执行JAR包，也就是所谓的fat JAR包；
+- maven-assembly-plugin，支持自定义的打包结构，也可以定制依赖项等。
 
 
 
