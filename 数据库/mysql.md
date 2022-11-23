@@ -210,6 +210,7 @@ B树和B+树之间对比：https://blog.csdn.net/qq_26222859/article/details/806
     Threads_created表示创建过的线程数，如果发现Threads_created值过大的话，表明MySQL服务器一直在创建线程，这也是比较耗资源
 
 # 实时分析哪些线程正在运行（命令SHOW PROCESSLIST）
+	select * from information_schema.processlist
     mysql> show processlist; 
     mysql> show full processlist;
     ------  字段解释 -----------------------------------------------------------------------
