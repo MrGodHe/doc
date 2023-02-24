@@ -1,8 +1,15 @@
-官方文档：https://docs.spring.io/spring-boot/docs/2.2.1.RELEASE/reference/html/
+官方文档：https://docs.spring.io/spring-boot/docs/
 
 
 # springboot 简介
     轻量级java开发框架
+
+| springboot版本 | spring版本              | jdk版本 |
+| -------------- | ----------------------- | ------- |
+| 3.0.2          | Spring Framework 6.0.4  | Java 17 |
+| 2.7.8          | Spring Framework 5.3.25 | Java 8  |
+
+
 
 # 注解
 

@@ -7,13 +7,15 @@ mvn dependency:tree
 编译打包
 
 ```
-mvn clean package -Dmaven.test.skip=true
+mvn clean package -DskipTests=true
+
+mvn -DskipTests=true clean package -s E:\software\maven\apache-maven-3.6.2\conf\settings-mt.xml
 ```
 
 编译部署本地包
 
 ```
-mvn clean install -DMaven.test.skip=true -s settings-xx.xml
+mvn clean install -DskipTests=true -s settings-xx.xml
 ```
 
 部署到私服
