@@ -9,7 +9,7 @@ mvn dependency:tree
 ```
 mvn clean package -DskipTests=true
 
-mvn -DskipTests=true clean package -s E:\software\maven\apache-maven-3.6.2\conf\settings-mt.xml
+mvn clean package -DskipTests=true -s E:\software\maven\apache-maven-3.6.2\conf\settings-mt.xml
 ```
 
 编译部署本地包
