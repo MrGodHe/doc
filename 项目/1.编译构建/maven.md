@@ -27,9 +27,9 @@ mvn deploy -s settings-xx.xml
 #跳过测试：
 
 ```
--DskipTests=true	
--Dmaven.test.skip=ture
--Dmaven.test.skip.exec=true
+-Dmaven.test.skip=true，不执行测试用例，也不编译测试用例类。
+-DskipTests=true 跳过单元测试，但是会继续编译。
+
 ```
 
 

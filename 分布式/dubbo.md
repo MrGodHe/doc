@@ -2,7 +2,7 @@
 | -------- | ------------------------------ |
 | 版本号   | 2.7.4                          |
 
-# 背景
+## 背景
 
 - **单一应用架构**
 
@@ -16,7 +16,7 @@
 
   当垂直应用越来越多，各个应用的交互不可避免，把核心业务抽离为单独服务，逐步形成稳定的服务中心，以适应前端快速需求变化。此时为了提高服务的复用以及整合，就需要分布式服务RPC框架。
 
-# RPC框架
+## RPC框架
 
 **Remote Procedure Call 远程过程调用**。 
 
@@ -24,7 +24,7 @@
 
 ![](../image/dubbo/RPC.png)
 
-# dubbo 是什么？
+## dubbo 是什么？
 
 Dubbo是一款高性能、轻量级的开源Java RPC框架
 
@@ -47,7 +47,7 @@ Dubbo是一款高性能、轻量级的开源Java RPC框架
 5. 服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用。
 6. 服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心。
 
-# dubbo 能做什么？
+dubbo 能做什么？
 
 它提供了三大核心能力：
 
@@ -63,7 +63,7 @@ Dubbo是一款高性能、轻量级的开源Java RPC框架
 
   不再需要写死服务提供方地址，注册中心基于接口名查询服务提供者的IP地址，并且能够平滑添加或删除服务提供者。
 
-# dubbo 核心原理
+## dubbo 核心原理
 1. **服务的导出**
 
    ```
@@ -128,16 +128,22 @@ Dubbo是一款高性能、轻量级的开源Java RPC框架
 
  
 
-#  dubbo-spi
+##  dubbo-spi
 SPI 全称为 Service Provider Interface（服务发现机制）。
 
 SPI 的本质是将接口实现类的全限定名配置在文件中，并由服务加载器读取配置文件，加载实现类。这样可以在运行时，动态为接口替换实现类，通过 SPI 机制为我们的程序提供拓展功能。
 
 **dubbo-spi** 
+
         1. 配置文件需放置在 META-INF/dubbo 路径下（键值对的方式进行配置，如：bumblebee = org.apache.spi.Bumblebee）
-        2. 接口上 @SPI 注解
-    Dubbo SPI 除了支持按需加载接口实现类，还增加了 IOC 和 AOP 等特性    
+                2. 接口上 @SPI 注解
+        Dubbo SPI 除了支持按需加载接口实现类，还增加了 IOC 和 AOP 等特性    
 
 
 
- 
+
+
+## dubbo注册中心：
+
+https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/registry/nacos/
+
