@@ -130,11 +130,12 @@ git merge xxx 	表示把xxx分支合并到当前分支上
 远程仓库同步
 
 ```
-git fetch  						同步远程仓库所有变动
-git remote -v 					显示所有远程仓库信息
-git remote add [origin] [url]  	增加一个新的远程仓库，并命名
-git push [origin] [branch]		上传本地指定分支到远程仓库
-git pull [origin] [branch] 		取回远程仓库的变化，并与本地分支合并
+git fetch  							同步远程仓库所有变动
+git remote -v 						显示所有远程仓库信息
+git remote add [origin] [url]  		增加一个新的远程仓库，并命名
+git remote set-url [origin] [url] 	重置远程仓库url
+git push [origin] [branch]			上传本地指定分支到远程仓库
+git pull [origin] [branch] 			取回远程仓库的变化，并与本地分支合并
 ```
 
 bug分支
