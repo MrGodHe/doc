@@ -11,3 +11,6 @@
 
 例子：VLOOKUP(D1, Sheet2!$A$1:$B$518 ,2,  FALSE)
 
+多条件：
+=VLOOKUP(G2&B2,IF({1,0},O:O&P:P,Q:Q),2,0)
+
